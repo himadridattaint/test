@@ -1,0 +1,12 @@
+import java.util.*;
+public class ElementFrequency
+{
+	public static void main(String[] a) {
+		ArrayList<Integer> listarray= Arrays.asList(4,2,8,3,1,1,4,4,6,6,6);
+		
+		LinkedHashMap <Integer, Integer>  hm= new LinkedHashMap<>();
+		for(int n: listarray){
+		  hm.put(n,hm.getOrDefault(n,0)+1);  
+		}
+		Collections.sort(listarray,(a,b) -> hm.get(b) - hm.get(a));
+		System.out.println(listarray);
