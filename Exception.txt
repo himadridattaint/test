@@ -1,0 +1,34 @@
+import java.util.*;
+
+class HandleException
+{
+    public static void detectException(int number,int range)
+    {
+        for(int i=0;i<=range;i++)
+        {
+            int result=-1;
+            try {
+                
+                result=number/i;
+                System.out.println(result);
+            } catch(Exception e) {
+                System.out.println(-1+" The Errpr is :"+e.getMessage());
+            }
+            
+            
+        }
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner r=new Scanner(System.in);
+	    int x=r.nextInt();
+	    int range=3;
+	    HandleException e =new HandleException();
+	    e.detectException(x,range);
+	    
+	    
+	//	System.out.println("Hello World");
+	}
+}
