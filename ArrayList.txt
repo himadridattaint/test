@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.*;
+
+
+public class Main
+{
+	public static void main(String[] args) { //ArrayList created
+	    ArrayList<Integer> number=new ArrayList<>();
+	    number.add(1);
+	    number.add(2);
+	    number.add(2);
+	    number.add(3);
+	    number.add(4);
+	    number.add(4);
+		System.out.println("ArrayList Elements="+number); //Convert ArrayList into Set
+		Set<Integer> set=new LinkedHashSet<>();
+		set.addAll(number);
+		System.out.println("Set Elements="+set);
+		number.clear(); //clear ArrayList
+		System.out.println("ArrayList Elements after clear="+number);
+		number.addAll(set); /// refill elements from set into array list
+		System.out.println("Final ArrayList Elements after sorted="+number);
+		
+	}
+}
