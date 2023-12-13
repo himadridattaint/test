@@ -1,0 +1,32 @@
+import java.util.*;
+class Student
+{
+    String studentName;
+    double percentage;
+    String department;
+   public Student(String studentName, double percentage,String department)
+    {
+        this.studentName=studentName;
+        this.percentage=percentage;
+        this.department=department;
+    }
+    public double getPercentage()
+    {
+        return percentage;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	ArrayList<Student> std=new ArrayList<>();
+	std.add(new Student("Himadri",92.44,"MCA"));
+	std.add(new Student("Avishek",85.78,"ECE"));
+	std.add(new Student("Kunal",62.14,"CSE"));
+	std.add(new Student("Vishal",45.74,"CSE"));
+	std.add(new Student("Ajay",69.02,"IT"));
+	Collections.sort(std,Comparator.comparingDouble(Student::getPercentage).reversed()); 
+	for(Student s:std)
+	System.out.println("Name:"+s.studentName+" Department is:"+s.department+" percentage is:"+s.percentage);
+		
+	}
+}
